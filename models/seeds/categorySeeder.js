@@ -3,26 +3,32 @@ const db = require('../../config/mongoose');
 
 const data = [
   {
-    category: 'food',
+    name: '飲食',
+    icon: `<i class="fas fa-utensils"></i>`,
   },
   {
-    category: 'entertainment',
+    name: '休閒娛樂',
+    icon: `<i class="fas fa-grin-beam"></i>`,
   },
   {
-    category: 'travel',
+    name: '交通',
+    icon: `<i class="fas fa-shuttle-van"></i>`,
   },
   {
-    category: 'shopping',
+    name: '家庭',
+    icon: `<i class="fas fa-home"></i>`,
   },
   {
-    category: 'transportation',
+    name: '其它',
+    icon: `<i class="fas fa-pen"></i>`,
   },
 ];
 
 db.once('open', () => {
   for (let i = 0; i < data.length; i++) {
     Category.create({
-      category: data[i].category,
+      name: data[i].name,
+      icon: data[i].icon,
     });
   }
   console.log('Category Done');
