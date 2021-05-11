@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 
 const bodyParser = require('body-parser');
 
+require('./config/mongoose');
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
 app.set('view engine', 'hbs');
 
