@@ -5,25 +5,25 @@ const data = [
   {
     name: 'lunch',
     category: 'food',
-    date: '2021/05/10',
+    date: '2021-05-10',
     amount: 150,
   },
   {
     name: 'movie',
     category: 'entertainment',
-    date: '2021/05/01',
+    date: '2021-05-01',
     amount: 300,
   },
   {
     name: 'train tickets',
     category: 'travel',
-    date: '2021/05/02',
+    date: '2021-05-02',
     amount: 500,
   },
   {
     name: 'adidas shoes',
     category: 'shopping',
-    date: '2021/05/06',
+    date: '2021-05-06',
     amount: 5000,
   },
 ];

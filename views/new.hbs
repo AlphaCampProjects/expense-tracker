@@ -1,0 +1,22 @@
+<div class="container new-page mt-5" style="width: 50%;">
+  <h2 class="my-3 text-center">請輸入您的支出</h2>
+  <form action="/records" method="POST">
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1" >名稱</label>
+      <input type="text" class="form-control" id="exampleInputText" placeholder="請輸入名稱" name="name">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleFormControlSelect1">日期</label>
+      <input type="date" class="form-control" id="exampleInputDate" placeholder="請輸入日期" name="date">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">類別</label>
+      <input type="text" class="form-control" id="exampleInputText" placeholder="請選擇類別" name="category">
+    </div>
+    <div class="form-group my-3">
+      <label for="exampleInputEmail1">金額</label>
+      <input type="number" class="form-control" id="exampleInputText" placeholder="請輸入金額" min="0" step="1" name="amount">
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Submit</button>
+  </form>
+</div>
