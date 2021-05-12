@@ -4,23 +4,23 @@ const db = require('../../config/mongoose');
 const data = [
   {
     name: '飲食',
-    icon: `<i class="fas fa-utensils"></i>`,
+    icon: 'fas fa-utensils',
   },
   {
     name: '休閒娛樂',
-    icon: `<i class="fas fa-grin-beam"></i>`,
+    icon: 'fas fa-grin-beam',
   },
   {
     name: '交通',
-    icon: `<i class="fas fa-shuttle-van"></i>`,
+    icon: 'fas fa-shuttle-van',
   },
   {
     name: '家庭',
-    icon: `<i class="fas fa-home"></i>`,
+    icon: 'fas fa-home',
   },
   {
     name: '其它',
-    icon: `<i class="fas fa-pen"></i>`,
+    icon: 'fas fa-pen',
   },
 ];
 

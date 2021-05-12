@@ -14,8 +14,10 @@
       <input type="text" class="form-control" id="exampleInputText" placeholder="請選擇類別" name="category"> --}}
       <label for="inputState" class="form-label">類別</label>
       <select id="inputState" class="form-select" placeholder="請選擇類別" name="category">
-        <option selected>Choose...</option>
-        <option>...</option>
+        <option selected>請選擇類別</option>
+        {{#each category}}
+        <option >{{this.name}}</option>
+        {{/each}}
     </select>
       
     </div>

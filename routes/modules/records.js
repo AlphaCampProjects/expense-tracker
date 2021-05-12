@@ -1,18 +1,28 @@
 const express = require('express');
 const router = express.Router();
-
+const Category = require('../../models/category');
 const Record = require('../../models/record');
 
 //creat new record
 router.get('/new', (req, res) => {
-  res.render('new');
+  Category.find()
+    .lean()
+    .then((category) => res.render('new', { category }))
+    .catch((error) => console.error(error));
 });
 
 router.post('/', (req, res) => {
   const record = req.body;
-  return Record.create(record)
-    .then(() => res.redirect('/'))
-    .catch((error) => console.log(error))
+  const category = req.body.category;
+
+  Category.findOne({ name: category })
+    .lean()
+    .then(function (item) {
+      return (record.icon = item.icon);
+    })
+    .then(() => {
+      Record.create(record).then(() => res.redirect('/'));
+    })
     .catch((error) => console.log(error));
 });
 

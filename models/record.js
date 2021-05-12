@@ -17,6 +17,10 @@ const recordSchema = new Schema({
     type: Number,
     required: true,
   },
+  icon: {
+    type: String,
+    default: '',
+  },
 });
 
 module.exports = mongoose.model('Record', recordSchema);
