@@ -1,0 +1,37 @@
+.records p {
+  margin: 5px;
+}
+
+.record-detail {
+  line-height: 20px;
+}
+
+.record-title {
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.record-date {
+  font-size: 10px;
+}
+
+.category-icon {
+  color: #4483ec;
+}
+
+.records {
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+
+.total-amount span {
+  font-size: 35px;
+}
+
+.total-amount span:first-child {
+  font-size: 20px;
+}
+
+.total-amount-price {
+  background: linear-gradient(#fff 60%, #b5cdf8 0%) !important;
+}
