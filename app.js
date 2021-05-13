@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const exphbs = require('express-handlebars');
 const Record = require('./models/record');
 const bodyParser = require('body-parser');
@@ -26,6 +26,6 @@ app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
 app.use(routes);
-app.listen(port, () => {
-  console.log(`The express server is running on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`The express server is running on http://localhost:${PORT}`);
 });
