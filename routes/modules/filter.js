@@ -8,16 +8,21 @@ router.get('/', (req, res) => {
   let filter = req.query.filter;
   let totalAmount = 0;
   let categoryList = [];
-  Category.find()
-    .lean()
-    .then((items) => {
-      items.forEach((item) => categoryList.push(item.name));
-    });
-  Record.find({ category: filter })
-    .lean()
-    .then((records) => {
-      records.forEach((record) => (totalAmount += record.amount));
-      res.render('index', { records, categoryList, totalAmount, filter });
-    });
+  if (filter === '篩選支出') {
+    res.redirect('/');
+  } else {
+    Category.find()
+      .lean()
+      .then((items) => {
+        items.forEach((item) => categoryList.push(item.name));
+      });
+    Record.find({ category: filter })
+      .lean()
+      .then((records) => {
+        records.forEach((record) => (totalAmount += record.amount));
+        res.render('index', { records, categoryList, totalAmount, filter });
+      });
+  }
 });
+
 module.exports = router;

@@ -3,28 +3,28 @@ const db = require('../../config/mongoose');
 
 const data = [
   {
-    name: 'lunch',
+    name: '午餐吃pizza',
     category: '飲食',
     date: '2021-05-10',
     amount: 150,
     icon: 'fas fa-utensils',
   },
   {
-    name: 'movie',
+    name: '電影票',
     category: '休閒娛樂',
     date: '2021-05-01',
     amount: 300,
     icon: 'fas fa-grin-beam',
   },
   {
-    name: 'train tickets',
+    name: '火車票',
     category: '交通',
     date: '2021-05-02',
     amount: 500,
     icon: 'fas fa-shuttle-van',
   },
   {
-    name: 'adidas shoes',
+    name: 'adidas 鞋',
     category: '其它',
     date: '2021-05-06',
     amount: 5000,
