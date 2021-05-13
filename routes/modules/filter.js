@@ -1,10 +1,11 @@
+// 引用 Express 與 Express 路由器
 const express = require('express');
 const router = express.Router();
 const Category = require('../../models/category');
-
 const Record = require('../../models/record');
 
 router.get('/', (req, res) => {
+  let filter = req.query.filter;
   let totalAmount = 0;
   let categoryList = [];
   Category.find()
@@ -12,14 +13,11 @@ router.get('/', (req, res) => {
     .then((items) => {
       items.forEach((item) => categoryList.push(item.name));
     });
-
-  Record.find()
+  Record.find({ category: filter })
     .lean()
     .then((records) => {
       records.forEach((record) => (totalAmount += record.amount));
-      res.render('index', { records, totalAmount, categoryList });
-    })
-    .catch((error) => console.error(error));
+      res.render('index', { records, categoryList, totalAmount, filter });
+    });
 });
-
 module.exports = router;

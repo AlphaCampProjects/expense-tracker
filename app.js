@@ -7,9 +7,17 @@ const Record = require('./models/record');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const routes = require('./routes');
-
+const helper = exphbs.create({
+  defaultlayout: 'main',
+  extname: 'hbs',
+  helpers: {
+    eq: function (v1, v2) {
+      return v1 === v2;
+    },
+  },
+});
 require('./config/mongoose');
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: 'hbs' }));
+app.engine('hbs', helper.engine);
 app.set('view engine', 'hbs');
 
 app.use(bodyParser.urlencoded({ extended: true }));

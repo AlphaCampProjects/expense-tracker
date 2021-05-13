@@ -7,8 +7,10 @@
 }
 
 .record-title {
-  font-size: 25px;
+  font-size: 20px;
+  line-height: 20px;
   font-family: 'Roboto Mono', monospace;
+  overflow-wrap: break-word;
 }
 
 .record-date {
@@ -20,18 +22,37 @@
 }
 
 .records {
-  border-radius: 10px;
-  background-color: cadetblue;
+  border-radius: 8px;
+  background-color: #4483ec;
 }
 
 .total-amount span {
-  font-size: 35px;
+  font-size: 50px;
+  font-style: italic;
 }
 
 .total-amount span:first-child {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .total-amount-price {
-  background: linear-gradient(#fff 60%, #b5cdf8 0%) !important;
+  background: linear-gradient(#fff 50%, #b5cdf8 0%) !important;
+  font-size: 50px;
+}
+
+.list-group-item {
+  background-color: #f7f5fb !important;
+  border: 1px solid #fef5eb !important;
+}
+
+.record-amount {
+  font-size: 1.2em;
+}
+.filter-icon {
+  font-size: 1.5em;
+  color: #8e9aaf;
+}
+.edit-title,
+.new-title {
+  background: linear-gradient(#fff 50%, #b5cdf8 0%) !important;
 }
