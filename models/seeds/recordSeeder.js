@@ -42,5 +42,6 @@ db.once('open', () => {
       icon: data[i].icon,
     });
   }
-  console.log('Done');
+  console.log('insert record data done...');
+  return db.close();
 });

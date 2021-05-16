@@ -31,5 +31,6 @@ db.once('open', () => {
       icon: data[i].icon,
     });
   }
-  console.log('Category Done');
+  console.log('insert category data done...');
+  return db.close();
 });
