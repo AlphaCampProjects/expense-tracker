@@ -25,12 +25,18 @@ const data = [
 ];
 
 db.once('open', () => {
-  for (let i = 0; i < data.length; i++) {
-    Category.create({
-      name: data[i].name,
-      icon: data[i].icon,
-    });
-  }
-  console.log('insert category data done...');
-  return db.close();
+  Category.create(data)
+    .then(() => {
+      console.log('Category created!');
+      return db.close();
+    })
+    .then(() => console.log('Database connection closed'))
+    .catch((error) => console.log(error));
 });
+//  ({
+//       name: data[i].name,
+//       icon: data[i].icon,
+//     });
+//   }
+//   console.log('insert category data done...');
+//   return db.close();

@@ -33,15 +33,19 @@ const data = [
 ];
 
 db.once('open', () => {
-  for (let i = 0; i < data.length; i++) {
-    Record.create({
-      name: data[i].name,
-      category: data[i].category,
-      date: data[i].date,
-      amount: data[i].amount,
-      icon: data[i].icon,
-    });
-  }
-  console.log('insert record data done...');
-  return db.close();
+  Record.create(data)
+    .then(() => {
+      console.log('Category created!');
+      return db.close();
+    })
+    .then(() => console.log('Database connection closed'))
+    .catch((error) => console.log(error));
 });
+
+// {
+//       name: data[i].name,
+//       category: data[i].category,
+//       date: data[i].date,
+//       amount: data[i].amount,
+//       icon: data[i].icon,
+//     }
