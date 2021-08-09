@@ -1,8 +1,8 @@
 # expense-tracker
 運用Node.js + Express框架與MongoDB資料庫製作的精簡版記帳網頁，使用者可以任意新增自己的支出，並將支出分類，首頁可以查看、編輯、刪除各項支出項目；使用者也可以使用篩選功能查看特定類別的支出項目總和。
+[【Demo link】](https://quiet-fjord-10116.herokuapp.com/)
 
 ## 專案畫面
-<<<<<<< HEAD
 ### 專案首頁
 列出所有支出項目
 
@@ -43,5 +43,3 @@ npm i nodemon
 npm run dev
 ```
 終端機顯示 Start listening on http://localhost:3000 即成功啟動，可至 http://localhost:3000 開始使用！
-=======
->>>>>>> 32213ce (Create README.md)
